@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas decoradas</title><!--@Curso em Vídeo HTML5 e CSS3, módulo 02, 29/43-->
+    <style>
+        h1 {
+            border: 11px solid transparent;/*É obrigatório para border-image funcionar*/
+            padding: 10px;
+
+            border-image: url('borda.png') 25 repeat;/*short-hand para resumir
+            border-image-source: url('borda.png');
+            border-image-slice: 25;
+            border-image-repeat: repeat;*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de borda</h1>
+</body>
+</html>

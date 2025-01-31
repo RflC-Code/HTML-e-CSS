@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Imagem/Tela</title>
+</head>
+<body>
+    <h1>Adaptando imagem por tamanho de tela</h1>
+    <picture>
+        <source media="(max-width: 650px)" srcset="imagem_pequena.png" type="image/png">
+        <source media="(max-width: 950px)" srcset="imagem_media.png" type="image/png">
+        <img src="imagem_grande.png" alt="Imagem flexível">
+    </picture>
+</body>
+</html>

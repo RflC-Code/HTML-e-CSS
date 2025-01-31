@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'idroid';
+    src: url(fontes/idroid.otf) format('Opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+header {
+    background-image: linear-gradient(to bottom, lightgreen 1%, rgb(1, 74, 1));
+    width: initial;
+    padding: 3px 3px 6px 20px;
+    margin: 0cap;
+}
+nav > a {
+    text-decoration: none;
+    color: white;
+    padding-right: 30px;
+}
+body {
+    background-color: lightgreen;
+}
+h1 {
+    font-family: 'idroid', sans-serif;
+    font-size: 2em;
+    color: rgb(1, 65, 1);
+}
+h2 {
+    font-family: 'idroid', sans-serif;
+    color: rgb(1, 65, 1);
+    background-image: linear-gradient(to right, rgba(144, 238, 144, 0.698), white);
+}
+main {
+    background-color: white;
+    width: 800px;
+    padding: 30px;
+    text-align: justify;
+    margin: auto;
+}
+.mainDiferente {
+    background-color: rgb(1, 65, 1);
+    width: 800px;
+    text-align: justify;
+    margin: auto;
+}
+.especial {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+}
+article {
+    background-color: lightgreen;
+    padding: 5px;
+    border-radius: 10px;
+}
+.extra {
+    background-color: rgb(1, 65, 1);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding: 3px;
+    margin: 0;
+}
+footer {
+    background-color: rgb(1, 65, 1);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+footer > p {
+    margin: 0;
+}

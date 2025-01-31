@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+        SELETORES PERSONALIZADOS:
+        # = id
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = children
+        */
+        body {
+            font-family: monospace;
+            font-size: 18px;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        a:visited {
+            color: darkred;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+        a:active {
+            color: yellow;
+        }
+        .especial::before {
+            content: '\002BCE  ';
+        }
+        .especial {
+            background-color: rgba(140, 106, 106, 0.477);
+        }
+        a::after {
+            text-decoration: none;
+            font-weight: normal;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com">Site do curso em vídeo</a></li>
+        <li><a href="https://www.xvideos.com" class="especial">Site pornô</a></li>
+        <li><a href="https://fatalmodel.com">Site de acompanhantes</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Trabalhando com links</title><!--@Curso em Vídeo HTML5 e CSS3, 27, 41-->
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar meu <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">repositório público no Github</a></p>
+    <p>Você também pode acessar meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
+    <!--target="_blank" rel="external" serve para essa página não ser subscrita quando for clicado no link, vai abrir a página do link sem excluir essa página-->
+    <h1>Usando links internos</h1>
+    <p>Esta é a primeira página do site, se você quiser, pode acessar tamtám a minha <a href="10pagina2.html" rel="next" target="_self">segunda página</a></p>
+    <!--Links internos só funcionam se os arquivos estiverem na mesma página-->
+    <p>Você também pode acessar nossa <a href="10Noticias/10pagina3.html" rel="next" target="_self">página de notícias</a></p>
+
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="10Noticias/Ali Baba et 40 voleurs.pdf" download="Ali Baba et 40 voleurs.pdf" type="application/pdf">Baixar a história em PDF</a></li>
+        <li><a href="10Noticias/Ali Baba et 40 voleurs.zip" download="Ali Baba et 40 voleurs.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+    
+</body>
+</html>

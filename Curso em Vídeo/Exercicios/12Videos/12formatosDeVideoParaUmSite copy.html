@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor</p>
+    <video width="750" poster="WIN_20230607_13_33_46_Pro.jpg" controls>
+        <source src="EVERYTHING Looks Better in Slow Motion! (Volume 9).mp4" type="video/mp4"><!--Esse source serve para o caso do navedor não suportar um formato de vídeo, é bom adicionar aqui vários formatos-->
+        <source src="EVERYTHING Looks Better in Slow Motion! (Volume 9).ogv" type="video/ogg">
+        <p>Seu computador não tem compatibilidade com reprodução de vídeos</p>
+    </video>
+
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CID-sYQNCew?si=cEMFl4i6XtHmIe7B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeo do Vimeo</h1>
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1034280087?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:70%;height:40%;" title="Diamond"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+</html>
