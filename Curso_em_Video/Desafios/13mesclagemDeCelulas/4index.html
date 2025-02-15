@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de Células</title>
+    <style>
+        table {
+            width: 550px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: darkgray;
+            color: white;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Área</th>
+                <th rowspan="2">Diciplinas</th>
+                <th colspan="2">Notas</th>
+                <th rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="5" style="background-color: white; color: black; border-color: black;">Exatas</th>
+            </tr>
+            <tr>
+                <td>Matemática</td>
+                <td>7.6</td>
+                <td>5.8</td>
+                <td>6.7</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>4.6</td>
+                <td>8.2</td>
+                <td>6.4</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td>6.8</td>
+                <td>7.5</td>
+                <td>7.1</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>8.3</td>
+                <td>8.9</td>
+                <td>8.6</td>
+            </tr>
+            <tr style="background-color: darkgray; color: white;">
+                <td colspan="4" style="border-color: white;">Média de Exatas</td>
+                <td style="border-color: white;">7.2</td>
+            </tr>
+            
+                <tr>
+                    <th rowspan="5" style="background-color: white; color: black; border-color: black;">Humanas</th>
+                </tr>
+                <tr>
+                    <td>História</td>
+                    <td>9.5</td>
+                    <td>8.8</td>
+                    <td>9.1</td>
+                </tr>
+                <tr>
+                    <td>Geografia</td>
+                    <td>7.9</td>
+                    <td>6.5</td>
+                    <td>7.2</td>
+                </tr>
+                <tr>
+                    <td>Português</td>
+                    <td>8.1</td>
+                    <td>8.5</td>
+                    <td>8,3</td>
+                </tr>
+                <tr>
+                    <td>Filosofia</td>
+                    <td>7.3</td>
+                    <td>8.4</td>
+                    <td>7.8</td>
+                </tr>
+                <tr style="background-color: darkgray; color: white;">
+                    <td colspan="4" style="border-color: white;">Média de Humanas</td>
+                    <td style="border-color: white;">8.3</td>
+                </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
