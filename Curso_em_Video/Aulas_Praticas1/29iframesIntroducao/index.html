@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução do uso de Iframes</title><!--@Curso em Vídeo HTML5 e CSS3, 02/45-->
+    <style>
+        iframe {
+            width: 200px;/*Nesse caso as CSS subcrevem as configurações inline*/
+            height: 200px;
+            border: 10px currentColor black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o usa de um Iframe</h1>
+    <p>Acessando o site do 
+        <!--Tamanho padrão de um iframe é de 300x150-->
+        <iframe src="https://www.cursoemvideo.com" height="500" scrolling="no"></iframe>
+    para programar</p>
+    <p>O site do <iframe src="https://www.google.com.br" frameborder="0">Seu navegador não é compatível com isso.</iframe> também é muito legal</p><!--Alguns sites não disponibilizão iframe-->
+    <p>Vídeo com iframe já pronto fornecido pelo YouTube:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CVrZXdoRBoc?si=am4m0hpqJh8oeN8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>
+        O repositório do Guanabara 
+        <iframe src="https://www.gustavoguanabara.github.io" frameborder="0"> <a href="gustavoguanabara.github.io">Curso em Vídeo</a></iframe>
+        também é bem legal
+    </p>
+</body>
+</html>
