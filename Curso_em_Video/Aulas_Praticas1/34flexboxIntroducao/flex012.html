@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: darkslategrey;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            
+            
+        }
+
+        div#cxa {
+            /*
+            flex-shrink: 0;
+            flex-grow: 1;
+            flex-basis: 200px;
+            shorthand abaixo:
+            */
+
+            flex: 1 0 200px;
+
+            /*
+            flex: 0 1 auto; (a mesma coisa de flex: initial;) é o valor padrão, a mesma coisa de não colocar nada
+            flex: 0 0 auto; é a mesma coisa de flex: none; significa "nada flexível"
+            flex: 1 1 auto; é a mesma coisa que flex: auto; e é o contrário do flex anterior, significa "máximo de flexibilidade que um filho (ítem) pode ter"
+            flex: 3; é a mesma coisa que escrever flex: 3 1 auto; (só altera o valor padrão de flex-grow)
+            */
+        }
+
+        div#cxb {
+            /*
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px;
+            shorthand abaixo:
+            */
+
+            flex: 1 1 150px;
+        }
+
+        div#cxc {
+            /*
+            flex-shrink: 8;
+            flex-grow: 1;
+            flex-basis: auto;
+            shorthand abaixo:
+            */
+
+            flex: 1 8 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner"><!--Pai-->
+        <div class="item" id="cxa">A</div>
+        <div class="item" id="cxb">B</div>
+        <div class="item" id="cxc">C</div>
+    </div>
+</body>
+</html>
