@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu flexível</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 565px)">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
-        <nav>
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF" onclick="cliqueMenu()"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        <nav id="itens">
             <a href="#">Opção 1</a>
             <a href="#">Opção 2</a>
             <a href="#">Opção 3</a>
@@ -23,5 +25,20 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores quos consequatur pariatur tenetur odit sit eius molestiae, labore reprehenderit non modi animi officiis saepe optio aperiam rerum voluptas dolore excepturi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa harum quisquam, excepturi eum officia est deleniti illo voluptatibus quo optio quidem, incidunt minima placeat consequatur odit ea voluptate beatae.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quidem at mollitia laborum eum porro veniam quod numquam voluptates, omnis tempora ipsam molestias. Iure in ullam sit mollitia quod repellat!</p>
     </main>
+    <script>
+        function cliqueMenu(){
+            let itens = document.getElementById("itens")
+            itens.classList.toggle("mostrar")
+        }
+
+        function mudouTamanho() {
+            let itens = document.getElementById("itens")
+            if(window.innerWidth>=565){
+                itens.classList.add("mostrar")
+            }else{
+                itens.classList.remove("mostrar")
+            }
+        }
+    </script>
 </body>
 </html>

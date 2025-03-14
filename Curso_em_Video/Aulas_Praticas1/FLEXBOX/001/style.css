@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: linear-gradient(to bottom, white, orangered);
+    height: 100vh;/*Faz com que ocupe a tela toda*/
+    width: 100vw;
+    padding: 10px;
+    display: flex;/*Por padrão toda div é block-level, colocando flex fica como inline-level*/
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.item {
+    background-color: rgb(38, 0, 38);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.item2 {
+    align-self: flex-start;
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+header, header > nav {
+    flex-flow: column nowrap;
+}
+
+header > h1 {
+    flex-basis: 50px;
+}
+
+svg {
+    background-color: black;
+    width: 90vw;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+header > nav > a {
+    width: 90vw;
+}
