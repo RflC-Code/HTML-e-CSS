@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <header>
+        <h1 id="tituloPagina">Flexbox Explorer</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Projetos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article id="art1">
+                <h1 style="text-align: center;">Aprendendo Flexbox na prática</h1>
+                <p style="font-size: 12px;">Flexbox é uma poderosa ferramenta do CSS para criar layouts flexíveis e responsivos. Nesta página, exploramos como organizar elementos de forma eficiente e intuitiva.</p>
+                <h2>O que é Flexbox?</h2>
+                <p>Flexbox, ou Flexible Box Layout, é um modelo de layout do CSS3 que permite distribuir e alinhar elementos de forma dinâmica dentro de um contêiner. Ele facilita o posicionamento de itens, independentemente do tamanho da tela ou do conteúdo dos elementos.</p>
+                <p>Antes do Flexbox, os desenvolvedores dependiam de soluções como float, display: table, e posicionamento absoluto para organizar elementos em uma página. No entanto, essas abordagens frequentemente causavam problemas de alinhamento e responsividade, tornando o código mais complexo e difícil de manter.</p>
+                <p>Com o Flexbox, podemos organizar os elementos horizontalmente ou verticalmente, alinhá-los ao centro, distribuir o espaço uniformemente e até mesmo modificar a ordem de exibição sem alterar o HTML. Isso facilita muito a construção de interfaces responsivas.</p>
+                <p>Um dos maiores benefícios do Flexbox é sua capacidade de se adaptar automaticamente ao conteúdo dentro de um contêiner. Isso significa que, independentemente do número de elementos ou do tamanho da tela, os itens flexíveis podem ser organizados de maneira eficiente sem a necessidade de media queries complexas.</p>
+                <p>Se você está começando com CSS Flexbox, a melhor forma de aprender é experimentando diferentes combinações de propriedades e observando como elas afetam a disposição dos elementos na tela.</p>
+            </article>
+            <article id="art2">
+                <h2>Principais propriedades do Flexbox</h2>
+                <p>As propriedades do Flexbox permitem controlar a direção, alinhamento, espaçamento e ordem dos elementos. Algumas das principais propriedades incluem:</p>
+                <ul>
+                    <li><strong>display: flex;</strong> para ativar o Flexbox</li>
+                    <li><strong>flex-direction</strong> para definir a direção dos itens</li>
+                    <li><strong>justify-content</strong> para alinhar horizontalmente</li>
+                    <li><strong>align-items</strong> para alinhar verticalmente</li>
+                </ul>
+                <aside id="asideInterno">
+                    <h2>Dica rápida</h2>
+                    <p>Use align-content quando estiver lidando com múltiplas linhas dentro de um contêiner flexível. Se houver apenas uma linha, essa propriedade não terá efeito.</p>
+                </aside>
+            </article>
+        </section>
+        <aside id="asideExterno">
+            <h2>Recursos úteis e boas práticas</h2>
+            <h3>Materiais para aprofundamento</h3>
+            <p>Se você quer dominar o Flexbox, confira estes recursos:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout">Guia completo do MDN</a> – Documentação oficial do Mozilla sobre Flexbox</li>
+                <li><a href="#">CSS Tricks: A Complete Guide to Flexbox</a> – Um guia visual e interativo</li>
+                <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a> – Um jogo divertido para praticar alinhamento de elementos</li>
+                <li><a href="#">Flexbox Generator</a> – Ferramenta online para gerar código de Flexbox</li>
+            </ul>
+            <h3>Dicas de boas práticas</h3>
+            <ul>
+                <li>Use flexbox apenas quando necessário – Se um layout simples pode ser feito com display: block, não complique!</li>
+                <li>Prefira gap ao invés de margin para espaçamento – O gap permite um controle mais preciso sobre o espaço entre os elementos sem criar efeitos colaterais inesperados.</li>
+                <li>Cuidado com flex-basis e width juntos – Definir ambos pode gerar conflitos. Se estiver usando flex-basis, evite width no mesmo elemento.</li>
+                <li>Teste em telas menores – Flexbox é ótimo para responsividade, mas sempre confira como os elementos se comportam em dispositivos diferentes.</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2025 Flexbox Explorer | Criado para praticar layouts responsivos</p>
+    </footer>
+    
+</body>
+</html>
