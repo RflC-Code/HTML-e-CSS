@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>The Symbol of Freedom</h1>
+            <p>The Statue of Liberty stands tall as a symbol of freedom and hope. A gift from France to the United States in 1886, it has welcomed millions of immigrants arriving in search of a better life. Holding a torch that lights the way to liberty, it remains one of the most iconic landmarks in the world.</p>
+        </div>
+    </div>
+    <audio id="hoverSound" src="TheSymbolofFreedom.ogg"></audio>
+    <script>
+        const container = document.querySelector(".container");
+const body = document.body;
+
+container.addEventListener("mouseenter", () => {
+    body.classList.add("darkened");
+});
+
+container.addEventListener("mouseleave", () => {
+    body.classList.remove("darkened");
+});
+const container1 = document.querySelector(".container");
+        const audio = document.getElementById("hoverSound");
+        let audioPlayed = false; // Variável para evitar repetição
+
+        container1.addEventListener("mouseenter", () => {
+            if (!audioPlayed) {
+                audio.play();
+                audioPlayed = true;
+            }
+        });
+
+        container1.addEventListener("mouseleave", () => {
+            audioPlayed = false; // Permite tocar novamente quando o mouse sair e voltar
+        });
+    </script>
+</body>
+</html>
