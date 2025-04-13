@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.img-port{
+    width: 360px;
+    height: 660px;
+    background-size: cover;
+    background-position: 100% 0%;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.site1{
+    background-image: url(tela-facebook.jpg);
+    transition: 25s;
+}
+
+.site2{
+    background-image: url(tela-instagram.jpg);
+    transition: 15s;
+}

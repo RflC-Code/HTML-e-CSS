@@ -1,0 +1,44 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Permanent Marker", cursive;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 60px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*O flex não funciona sem esse 100vh de altura pois o container dele é o body que está sem espaço*/
+}
+
+.texto {
+    font-size: 60px;
+    text-transform: uppercase;
+
+    background: linear-gradient(45deg,black, rgb(140, 0, 0), rgb(49, 0, 0));
+    background-size: 400% 400%;
+    animation: degrade 10s ease-in infinite alternate;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    outline: none;
+}
+
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+

@@ -1,0 +1,70 @@
+@charset "UFT-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    background-image: linear-gradient(45deg, #eeeeee, #ffffff);
+}
+
+.container {
+    position: relative;
+    width: 250px;
+    height: 450px;
+}
+
+.container:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.flip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+
+.frente, .tras, .frente2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #0000001b;
+    backface-visibility: hidden;
+}
+
+.tras {
+    background-image: url(back_of_the_card.JPG);
+    background-size: 100% 100%;
+}
+
+.frente {
+    background-image: url(best-yugioh-trap-cards.png);
+    background-size: 100% 100%;
+    backface-visibility: hidden;
+    
+    transform: rotateY(180deg);
+}
+
+.frente2 {
+    background-image: url(spell_card.jpg);
+    background-size: 100% 100%;
+    backface-visibility: hidden;
+    
+    transform: rotateY(180deg);
+}
+
+
+

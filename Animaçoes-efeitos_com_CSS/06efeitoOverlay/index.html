@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        section.img{
+            width: 100%;
+            height: 100%;
+            background-image: url(USAmap.png);
+            background-position: center;
+            background-size: contain; /*100% 100% para que a imagem ocupe toda a tela sendo exticada*/
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .overlay:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <section class="img"><div class="overlay"></div></section>
+</body>
+</html>

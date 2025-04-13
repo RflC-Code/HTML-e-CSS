@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.txt_animado{
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.txt_animado span{
+    position: relative;
+}
+
+.txt_animado span::before{
+    content: "";
+    color: red;
+    animation: palavras 20s infinite;
+}
+
+.txt_animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    
+    right: -10px;
+    animation: cursor .4s infinite, digita 30s steps(15) infinite;
+    width: calc(100% + 15px);
+    background-color: #fff;
+
+}
+
+@keyframes digita{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 90%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,80%,85%{
+        width: calc(100% + 15px);
+    }
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #fff;;
+    }
+    
+}
+
+@keyframes palavras {
+    0%, 20%{
+        content: "Maçã";
+    }
+    21%, 40%{
+        content: "R$ 9,00/kg";
+    }
+    41%, 61%{
+        content: "só até dia 20";
+    }
+    81%, 100%{
+        content: "Aproveita";
+    }
+}
