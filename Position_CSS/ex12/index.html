@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            position: relative;
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #bolinha{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            animation: mover 3s infinite alternate ease;
+        }
+
+        @keyframes mover {
+            0%{
+                left: 0;
+                transform: translate(-100%);
+            }
+            100%{
+                left: 100%;
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="bolinha"></div>
+    </div>
+</body>
+</html>

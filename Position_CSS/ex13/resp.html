@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tooltip</title>
+  <style>
+    .container {
+      margin: 100px;
+    }
+
+    .botao-com-tooltip {
+      position: relative; /* Referência para a tooltip */
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 100%; /* Fica acima do botão */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+
+    .botao-com-tooltip:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="botao-com-tooltip">
+      Passe o mouse
+      <span class="tooltip">Clique aqui</span>
+    </button>
+  </div>
+</body>
+</html>

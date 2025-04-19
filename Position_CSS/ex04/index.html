@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - Balança Visual </title>
+    <style>
+        .container {
+          display: flex;
+          gap: 10px;
+          margin-top: 50px;
+          justify-content: flex-end;
+          background-color: palegoldenrod;
+        }
+    
+        .quadrado {
+          width: 60px;
+          height: 60px;
+        }
+    
+        .vermelho {
+          background-color: red;
+        }
+    
+        .verde {
+          background-color: green;
+          position: relative;
+          top: 0;
+          transition: .5s;
+          cursor: pointer;
+        }
+
+        .verde:hover{
+          top: -20px; /* Subiu 20px */ 
+        }
+    
+        .azul {
+          background-color: blue;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quadrado vermelho"></div>
+        <div class="quadrado verde"></div>
+        <div class="quadrado azul"></div>
+      </div>
+</body>
+</html>

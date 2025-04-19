@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Rodapé Fixo</title>
+  <style>
+    .caixa {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border: 2px solid #333;
+      background-color: #f0f0f0;
+      margin: 50px auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .rodape {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ccc;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="caixa">
+    <p>Esse é o conteúdo da caixa.</p>
+    <p>Aqui tem mais texto, apenas para preencher espaço e mostrar como o rodapé fica colado no fim.</p>
+
+    <div class="rodape">
+      Rodapé fixo na parte de baixo
+    </div>
+  </div>
+</body>
+</html>

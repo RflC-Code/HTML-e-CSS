@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolinha Animada</title>
+  <style>
+    .caixa {
+      width: 300px;
+      height: 300px;
+      background-color: #e0e0e0;
+      position: relative;
+      margin: 50px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bolinha {
+      width: 30px;
+      height: 30px;
+      background-color: crimson;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: mover 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes mover {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      25% {
+        top: 0;
+        left: 100%;
+        transform: translateX(-100%);
+      }
+      50% {
+        top: 100%;
+        left: 100%;
+        transform: translate(-100%, -100%);
+      }
+      75% {
+        top: 100%;
+        left: 0;
+        transform: translateY(-100%);
+      }
+      100% {
+        top: 0;
+        left: 0;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="caixa">
+    <div class="bolinha"></div>
+  </div>
+</body>
+</html>

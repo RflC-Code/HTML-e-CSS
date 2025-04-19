@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Texto sobre imagem</title>
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+
+    .container img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .texto-sobre {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="../led-branco-globo-historico-iluminado.png" alt="Imagem de exemplo">
+    <div class="texto-sobre">Texto centralizado</div>
+  </div>
+
+</body>
+</html>

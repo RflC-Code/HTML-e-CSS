@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 1 - Relative e Absolute</title>
+  <style>
+    .pai {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      position: relative; /* Define que esse será o "pai posicionado" */
+      margin: 50px; /* Só pra dar um espaço visual na página */
+    }
+
+    .filho {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute; /* Ele vai se posicionar em relação ao .pai */
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="pai">
+    <div class="filho"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartão com Faixa Diagonal</title>
+  <style>
+    .cartao {
+      position: relative;
+      width: 300px;
+      height: 180px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden; /* importante pra cortar a faixa certinho */
+      font-family: Arial, sans-serif;
+    }
+
+    .faixa-diagonal {
+      position: absolute;
+      top: 12px;
+      right: -50px; /* desloca pra fazer a diagonal encaixar */
+      background-color: crimson;
+      color: white;
+      padding: 6px 60px 6px 80px;
+      transform: rotate(45deg);
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .conteudo {
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cartao">
+    <div class="faixa-diagonal">NOVIDADE</div>
+    <div class="conteudo">
+      <h3>Produto Incrível</h3>
+      <p>Confira essa oferta exclusiva de lançamento!</p>
+    </div>
+  </div>
+
+</body>
+</html>
