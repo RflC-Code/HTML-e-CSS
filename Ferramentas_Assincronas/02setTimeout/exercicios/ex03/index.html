@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 – Cancelar timeout</title>
+    <!-- Agende uma mensagem para aparecer depois de 5 segundos, mas cancele essa mensagem com clearTimeout após 2 segundos. -->
+</head>
+<body>
+    <script>
+        let id = setTimeout(()=>{
+            alert('Você viu a mensagem!')
+        }, 5000)
+        let n = Math.floor(Math.random()*3)+1
+        if(n==2||n==1){
+            clearTimeout(id)
+            alert('Mensagem cancelada com sucesso!')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Destacar Parágrafo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .destaque {
+      background-color: yellow;
+      font-weight: bold;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="texto">Este é um parágrafo que pode ser destacado.</p>
+  <button onclick="destacar()">Destacar</button>
+
+  <script>
+    function destacar() {
+      const paragrafo = document.getElementById('texto');
+      paragrafo.classList.toggle('destaque');
+    }
+  </script>
+
+</body>
+</html>

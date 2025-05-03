@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #menu {
+      background-color: #eee;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    .escondido {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="botaoMenu">Menu</button>
+
+  <ul id="menu" class="escondido">
+    <li>Início</li>
+    <li>Sobre</li>
+    <li>Contato</li>
+  </ul>
+
+  <script>
+    const botao = document.getElementById('botaoMenu');
+    const menu = document.getElementById('menu');
+
+    botao.addEventListener('click', function () {
+      menu.classList.toggle('escondido');
+    });
+  </script>
+
+</body>
+</html>

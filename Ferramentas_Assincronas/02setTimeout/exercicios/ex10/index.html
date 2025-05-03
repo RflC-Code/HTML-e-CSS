@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12 – Animação</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+        .container{
+            position: relative;
+            box-shadow: 0px 0px 38px black;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            
+            /* overflow: hidden; */
+        }
+        .gelb{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 0, 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            transition: 2s;
+            z-index: 3;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .rot{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 0, 0, 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 160px;
+            transition: 2s;
+            z-index: 2;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .blau{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: rgba(0, 0, 255, 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 2s;
+            z-index: 1;
+            overflow: hidden;
+            transition: 1s;
+        }
+        .yellow{
+            background-color: yellow;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .red{
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .blue{
+            background-color: blue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .primärfarben{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 22px;
+            text-shadow: 1px 1px 0px black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            z-index: 4;
+        }
+        div{
+            color: white;
+            font-size: 22px;
+            text-shadow: 1px 1px 0px black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .textB{
+            position: absolute;
+            bottom: -100%;
+        }
+        .textR{
+            position: absolute;
+            right: -100px;
+        }
+        .textB{
+            position: absolute;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="blue" class="blau"><div id="textB"></div></div>
+        <div id="yellow" class="gelb"><div id="textG"></div></div>
+        <div id="red" class="rot"><div id="textR"></div></div>
+        <div id="primary-colors" class="primärfarben"></div>
+    </div>
+    <script>
+        const primaria = ["P", "r", "i", "m", "ä", "r", "f", "a", "r", "b", "e", "n"]
+        for(let n = 0; n < 12; n++){
+            setTimeout(()=>{
+            document.getElementById("primary-colors").textContent += primaria[n]
+            }, n * 500)
+        }
+        setTimeout(()=>{
+            document.getElementById("primary-colors").textContent = ""
+        }, 6500)
+        
+        const blue = ['B', 'l', 'a', 'u']
+        setTimeout(()=>{
+        document.getElementById("blue").classList.add("blue")
+        for(let n = 0; n < 4; n++){
+            setTimeout(()=>{
+            document.getElementById("textB").textContent += blue[n]
+            }, n * 500)
+        }
+        }, 6000)
+
+        const red = ['R', 'o', 't']
+        setTimeout(()=>{
+        document.getElementById("red").classList.add("red")
+        for(let n = 0; n < 3; n++){
+            setTimeout(()=>{
+            document.getElementById("textR").textContent += red[n]
+            }, n * 500)
+        }
+        }, 9000)
+
+        const yellow = ['G', 'e', 'l', 'b']
+        setTimeout(()=>{
+        document.getElementById("yellow").classList.add("yellow")
+        for(let n = 0; n < 4; n++){
+            setTimeout(()=>{
+            document.getElementById("textG").textContent += yellow[n]
+            }, n * 500)
+        }
+        }, 12000)
+
+
+        setTimeout(()=>{
+        document.getElementById("blue").classList.remove("blue")
+        }, 15000)
+        setTimeout(()=>{
+        document.getElementById("red").classList.remove("red")
+        }, 18000)
+        setTimeout(()=>{
+        document.getElementById("yellow").classList.remove("yellow")
+        }, 21000)
+
+        setTimeout(()=>{
+        document.getElementById("textB").classList.add("textB")
+        }, 24000)
+        setTimeout(()=>{
+        document.getElementById("textR").classList.add("textR")
+        }, 270000)
+        setTimeout(()=>{
+        document.getElementById("textG").classList.add("textG")
+        }, 30000)
+        
+    </script>
+</body>
+</html>

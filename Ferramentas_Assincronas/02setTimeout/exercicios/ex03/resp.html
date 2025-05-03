@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mostrarMensagem() {
+        console.log("Essa mensagem não vai aparecer!");
+        }
+
+        let id = setTimeout(mostrarMensagem, 5000); // agendando para daqui 5 segundos
+
+        // Agora vamos cancelar esse setTimeout depois de 2 segundos:
+        setTimeout(() => {
+        clearTimeout(id);
+        console.log("Mensagem cancelada com sucesso.");
+        }, 2000);
+
+    </script>
+</body>
+</html>

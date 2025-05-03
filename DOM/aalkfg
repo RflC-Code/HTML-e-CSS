@@ -1,0 +1,19 @@
+<div id="caixa" class="azul grande"></div>
+<button onclick="alterar()">Alterar Classe</button>
+
+<script>
+  function alterar() {
+    const caixa = document.getElementById('caixa');
+
+    // Trocar azul por vermelho
+    if (caixa.classList.contains('azul')) {
+      caixa.classList.replace('azul', 'vermelho');
+    }
+
+    // Adicionar uma borda se ainda não tiver
+    caixa.classList.add('borda');
+
+    // Alternar a classe "ativo"
+    caixa.classList.toggle('ativo');
+  }
+</script>

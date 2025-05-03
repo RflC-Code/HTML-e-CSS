@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 – Sequência de mensagens</title>
+</head>
+<body>
+    <script>
+        const frases = ["Preparar", "Apontar", "Já!"]
+        for(let n = 0; n <= 2; n++){
+            setTimeout(()=>{
+                alert(frases[n])
+            }, n * 7000)
+        }
+    </script>
+</body>
+</html>

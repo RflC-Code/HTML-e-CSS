@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = Math.floor(Math.random()*1000)+1
+        let multiplicador
+        let array = []
+        for(let i = 2; i < n; i++){
+            let primo = true
+            
+            for(let j = 2; j <= Math.sqrt(i); j++){
+                if(i%j===0){
+                    primo = false
+                    break
+                }
+                if(primo){
+                    multiplicador = Math.floor(Math.random()*9)+1
+                    array.push(i*multiplicador)//Além de ser primo ele é multiplicado por um número aleatório entre 1 e 9
+                }
+            }
+        }
+        console.log(array)
+    </script>
+</body>
+</html>

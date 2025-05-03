@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList - .contains e .replace</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+        .vermelho{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="azul" class="azul">Słowo</h1>
+    <button onclick="mudarCor()">Mudar cor</button>
+    <script>
+        function mudarCor(){
+            const cor = document.getElementById('azul')
+            if(cor.classList.contains('azul')){
+                cor.classList.replace('azul', 'vermelho')
+            }else{
+                cor.classList.replace('vermelho', 'azul')
+            }
+        }
+    </script>
+</body>
+</html>

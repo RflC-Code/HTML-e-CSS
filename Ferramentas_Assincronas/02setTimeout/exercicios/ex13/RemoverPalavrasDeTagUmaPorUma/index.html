@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="frase">maçã banana laranja uva</div>
+
+    <script>
+        const elemento = document.getElementById("frase")
+        const palavras = elemento.textContent.trim().split(" ")
+        palavras.pop()
+        elemento.textContent = palavras.join(" ")
+    </script>
+
+</body>
+</html>

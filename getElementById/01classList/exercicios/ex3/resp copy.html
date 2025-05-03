@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .vermelho {
+      color: red;
+    }
+  </style>
+  <!-- 🧠 O que é .toggle()?
+
+O método .toggle() da classList liga ou desliga uma classe no elemento.
+
+    Se a classe existir, ele REMOVE.
+
+    Se a classe não existir, ele ADICIONA.
+
+É tipo um interruptor de luz 💡: se está ligado, desliga; se está desligado, liga. -->
+</head>
+<body>
+  <h1 id="titulo">Olá!</h1><!--Não possui a class .vermelho portanto toggle adiciona ela-->
+  <button onclick="trocarCor()">Mudar Cor</button>
+  <script>
+    function trocarCor() {
+      const titulo = document.getElementById('titulo');
+      titulo.classList.toggle('vermelho');
+    }
+
+  </script>
+</body>
+</html>

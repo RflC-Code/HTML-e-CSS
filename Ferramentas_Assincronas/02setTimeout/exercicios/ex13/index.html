@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gedächtnisspiel</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+        .box{
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.222);
+            border-radius: 10px;
+            width: 200px;
+            height: 150px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            font-weight: 600;
+
+            position: absolute;
+            top: -190px;
+            /* top: 40px; */
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 2s;
+            overflow: hidden;
+            z-index: 1;
+            background-color: white;
+        }
+        .inserirTexto{
+            width: 130px;
+            height: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.297);
+            border: none;
+        }
+        .enviarResposta{
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .bi-x{
+            position: absolute;
+            top: 0px;
+            left: 91%;
+            color: white;
+            background-color: rgb(220, 0, 0);
+            cursor: pointer;
+        }
+        .bi-x:hover{
+            background-color: red;
+        }
+        .score{
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.289);
+            width: 150px;
+            height: 270px;
+            border-radius: 10px;
+            position: absolute;
+            top: 40px;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            padding: 10px;
+            font-weight: 700;
+        }
+        .acertos{
+            left: 5px;
+            background-image: linear-gradient(to top, rgb(70, 121, 70), rgb(200, 255, 200));
+            text-shadow: -1px 1px 0px rgba(0, 128, 0, 0.741);
+            transition: 5s;
+        }
+        .erros{
+            right: 5px;
+            background-image: linear-gradient(to top, rgb(208, 0, 0), rgb(255, 178, 178));
+            text-shadow: 1px 1px 0px rgb(187, 0, 0);
+            transition: 5s;
+        }
+        .fraseDica{
+            width: 100%;
+            height: 120px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.626);
+            position: absolute;
+            top: 70px;
+            z-index: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .frase{
+            position: absolute;
+            /* left: -90%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16" onclick="fechar()">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+          </svg>
+        <div id="zufalligesWort"></div>
+        <p class="frase">Qual é a tradução?</p>
+        <input type="text" class="inserirTexto" id="campoTexto">
+        <button id="enviar" class="enviarResposta" onclick="enviar()">Enviar</button>
+    </div>
+
+    <div class="score acertos">
+        <div class="numeroAcertos"></div>
+        <p class="acertado"></p>
+        <p id="acertos" ></p>
+    </div>
+
+    <div class="score erros">
+        <div class="numeroErros"></div>
+        <p class="errado"></p>
+        <p id="erros" ></p>
+    </div>
+
+    <div class="fraseDica">
+        <p class="frase">Eine gute Sprachkenntnis ist die wichtigste Voraussetzung für diesen Job.</p>
+    </div>
+
+
+    <script>
+        function fechar(){
+            document.querySelector(".box").style.display = 'none'
+            document.querySelector(".acertos").style.transform = 'translateX(-200%)'
+            document.querySelector(".erros").style.transform = 'translateX(200%)'
+        }
+        const array = ["Ansicht", "Beurteilung", "Voraussetzung", "Zusammenhang", "Verhalten", "Bedingung", "Einfluss", "Verantwortung", "Erkenntnis", "Fähigkeit"]
+        const traducao = ["opinião", "julgamento", "pré-requisito", "contexto", "comportamento", "condição", "influência", "responsabilidade", "conhecimento", "capacidade"]
+        
+        let palavra
+
+        setTimeout(()=>{
+            document.querySelector(".box").style.top = '40px'
+            palavra = Math.floor(Math.random()*array.length)//obter o índice da palavra do array
+            document.getElementById("zufalligesWort").textContent = array[palavra]
+        }, 3000)
+        
+        const acertos = []
+        const erros = []
+
+        function enviar(){
+            const textoDigitado = document.getElementById("campoTexto").value.trim().toLowerCase()
+                if(textoDigitado===traducao[palavra]){
+                    document.querySelector(".box").style.backgroundColor = 'rgb(200, 255, 200)'
+                    document.querySelector('.frase').textContent = 'Correto!'
+                    acertos.push(array[palavra])
+                    document.querySelector('.numeroAcertos').textContent = ' ' + acertos.length
+                    if(acertos.length===1){
+                        document.querySelector(".acertado").textContent = 'acerto:'
+                    }else{
+                        document.querySelector(".acertado").textContent = 'acertos:'
+                    }
+                    document.getElementById('acertos').textContent += array[palavra] + ' '
+                }else{
+                    document.querySelector(".box").style.backgroundColor = 'rgb(255, 180, 180)'
+                    document.querySelector('.frase').textContent = 'Errou!'
+                    erros.push(array[palavra])
+                    document.querySelector('.numeroErros').textContent = ' ' + erros.length
+                    if(erros.length===1){
+                        document.querySelector(".errado").textContent = 'erro:'
+                    }else{
+                        document.querySelector(".errado").textContent = 'erros:'
+                    }
+                    document.getElementById('erros').textContent += array[palavra] + ' '
+                }
+
+                setTimeout(()=>{
+                    do {
+                        palavra = Math.floor(Math.random()*array.length)//obter o índice da palavra do array
+                    }while (acertos.includes(array[palavra])||erros.includes(array[palavra]))//só para quando fornece uma palavra que ainda não foi acertada ou não esteja no array erros
+                    
+                    document.getElementById("zufalligesWort").textContent = array[palavra]
+                    document.querySelector(".box").style.backgroundColor = ''
+                    document.querySelector('.frase').textContent = 'Qual é a tradução?'
+            
+                }, 2000)
+                document.getElementById("campoTexto").value = ''
+                if(acertos.length+erros.length===array.length){
+                document.querySelector(".box").style.top = '-190px'
+        }
+        }
+
+        const fraseDica = ["Meiner Ansicht nach sollte man mehr auf die Umwelt achten.", "Die Beurteilung der Leistung erfolgt durch den Lehrer am Ende des Kurses.", "Eine gute Sprachkenntnis ist die wichtigste Voraussetzung für diesen Job.", "In diesem Zusammenhang ist es wichtig, die Geschichte zu verstehen.", "Sein Verhalten gegenüber den Kollegen war unprofessionell.", "Du darfst mitkommen, aber nur unter einer Bedingung.", "Die Werbung hat einen großen Einfluss auf unser Kaufverhalten.", "Eltern tragen die Verantwortung für ihre Kinder.", "Nach dem Gespräch kam er zu einer wichtigen Erkenntnis.", "Teamarbeit ist eine wichtige Fähigkeit im Berufsleben."]
+
+        document.querySelector(".fraseDica").style.top = '70px'
+        do{
+            
+        }while(erros.length>0)
+        
+    </script>
+</body>
+</html>

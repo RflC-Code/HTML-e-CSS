@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 18</title>
+  <style>
+    .caixa-fundo {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #ccc;
+      margin: 50px auto;
+    }
+
+    .caixa-sobreposta {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      background-color: rgba(0, 123, 255, 0.7); /* azul claro com 70% de opacidade */
+      top: 30px;
+      left: 50px;
+      border: 2px solid #0056b3;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="caixa-fundo">
+    <div class="caixa-sobreposta">Sobreposição</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal de Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Fundo escurecido opcional (como se fosse overlay) */
+    .overlay {
+      position: fixed; /* Fica fixo na tela */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Janela de login */
+    .login-box {
+      position: absolute;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+      /* Centralização */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .login-box h2 {
+      margin-top: 0;
+    }
+
+    .login-box input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    .login-box button {
+      padding: 10px;
+      width: 100%;
+      background-color: royalblue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay com o login centralizado -->
+  <div class="overlay">
+    <div class="login-box">
+      <h2>Login</h2>
+      <input type="text" placeholder="Usuário">
+      <input type="password" placeholder="Senha">
+      <button>Entrar</button>
+    </div>
+  </div>
+
+</body>
+</html>

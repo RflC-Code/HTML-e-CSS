@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* centraliza verticalmente */
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .caixa {
+            background-color: rgba(85, 107, 47, 0.348);
+            color: red;
+            border-radius: 20px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="mensagem" class="caixa"></div>
+
+    <script>
+        const name = prompt('Qual é o seu nome?');
+        
+        function saudacao(nome) {
+            const caixa = document.getElementById('mensagem');
+            caixa.innerText = `Olá, ${nome}!`;
+        }
+
+        setTimeout(saudacao, 30000, name); // 3 segundos só pra exemplo
+    </script>
+</body>
+</html>

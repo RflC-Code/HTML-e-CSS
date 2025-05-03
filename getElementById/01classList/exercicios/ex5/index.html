@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .destaque{
+            color: red;
+        }
+        .fundo{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Socorram-me, subi no ônibus em Marrocos</p>
+    <p id="destaque">Anotaram a data da maratona</p>
+    <p>A base do teto desaba</p>
+    <button onclick="mudarCor()">Mudar a cor da porra da frase</button>
+    <script>
+        function mudarCor(){
+            const n = document.getElementById('destaque')
+            n.classList.toggle('destaque')
+        }
+    </script>
+</body>
+</html>

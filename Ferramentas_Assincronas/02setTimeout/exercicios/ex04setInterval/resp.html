@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = 10;
+
+        const intervalo = setInterval(() => {
+            n--;
+            console.log(`Contagem: ${n}`);
+
+            if (n <= 1) {
+            clearInterval(intervalo); // para quando chega no fim
+            }
+        }, 5000); // a cada 5 segundos
+    </script>
+</body>
+</html>

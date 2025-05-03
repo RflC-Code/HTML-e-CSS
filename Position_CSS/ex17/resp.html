@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Relógio Flutuante</title>
+  <style>
+    body {
+      height: 2000px; /* só pra testar scroll */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .relogio {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #222;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="relogio" id="relogio">00:00:00</div>
+
+  <script>
+    function atualizarRelogio() {
+      const agora = new Date();
+      const horas = agora.getHours().toString().padStart(2, '0');
+      const minutos = agora.getMinutes().toString().padStart(2, '0');
+      const segundos = agora.getSeconds().toString().padStart(2, '0');
+
+      document.getElementById('relogio').textContent = `${horas}:${minutos}:${segundos}`;
+    }
+
+    // Atualiza imediatamente e depois a cada 1 segundo
+    atualizarRelogio();
+    setInterval(atualizarRelogio, 1000);
+  </script>
+
+</body>
+</html>

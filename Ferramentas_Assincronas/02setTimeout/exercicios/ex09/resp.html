@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Primeiro, pedimos o número de segundos
+let segundos = Number(prompt("Digite o número de segundos para o timer:"));
+
+// Verificamos se o número é válido (não é NaN e é positivo)
+if (!isNaN(segundos) && segundos > 0) {
+  // Convertemos para milissegundos e usamos setTimeout
+  setTimeout(() => {
+    alert("⏰ Tempo esgotado!");
+  }, segundos * 1000);
+} else {
+  alert("Valor inválido! Digite um número positivo.");
+}
+
+    </script>
+</body>
+</html>

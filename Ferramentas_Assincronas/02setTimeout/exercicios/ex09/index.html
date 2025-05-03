@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 9 – Timer com prompt (DOM + prompt)</title>
+</head>
+<body>
+    <script>
+        const segundos = prompt('Em quantos segundos a mensagem deve aparecer?')
+        let segundos2 = Number(segundos+'000')
+        setTimeout(()=>{
+            alert(`Se passaram ${segundos} segundos.`)
+        }, segundos2)
+    </script>
+</body>
+</html>

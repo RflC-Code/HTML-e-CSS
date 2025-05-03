@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caixa {
+          width: 150px;
+          height: 150px;
+          background-color: steelblue;
+          margin-top: 10px;
+        }
+      
+        .escondido {
+          display: none;
+        }
+      </style>
+</head>
+<body>
+    <button onclick="alternarCaixa()">Mostrar/Esconder</button>
+      
+      <div id="caixa" class="caixa"></div>
+      
+      <script>
+        function alternarCaixa() {
+          const caixa = document.getElementById('caixa');
+          caixa.classList.toggle('escondido');
+        }
+      </script>
+</body>
+</html>

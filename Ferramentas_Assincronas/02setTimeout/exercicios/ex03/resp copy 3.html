@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mensagem com tempo</title>
+</head>
+<body>
+  <h2>Digite o tempo (em segundos) ou "cancelar"</h2>
+
+  <input id="entrada" type="text" placeholder="Ex: 3 ou cancelar">
+  <button onclick="enviarMensagem()">Enviar</button>
+
+  <p id="saida"></p>
+
+  <script>
+    function enviarMensagem() {
+      const entrada = document.getElementById('entrada').value.trim();
+      const saida = document.getElementById('saida');
+
+      if (entrada.toLowerCase() === 'cancelar') {
+        saida.textContent = "Mensagem cancelada!";
+        return;
+      }
+
+      const tempoEmMs = Number(entrada) * 1000;
+
+      if (isNaN(tempoEmMs) || tempoEmMs < 0) {
+        saida.textContent = "Digite um número válido ou 'cancelar'.";
+        return;
+      }
+      
+      saida.textContent = `Mensagem será exibida em ${entrada} segundos...`;
+
+      setTimeout(()=>{
+        saida.textContent='...'
+      }, 3000)
+
+      setTimeout(() => {
+        alert(`Mensagem exibida após ${entrada} segundos.`);
+      }, tempoEmMs);
+    }
+  </script>
+</body>
+</html>

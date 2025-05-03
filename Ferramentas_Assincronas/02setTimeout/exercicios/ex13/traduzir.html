@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gedächtnisspiel</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    .palavraAleatoria {
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      width: 200px;
+      height: 150px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      font-weight: 600;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 2s;
+    }
+    .inserirTexto {
+      width: 130px;
+      height: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+      border: none;
+      padding: 2px;
+    }
+    .enviarResposta {
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .box {
+      width: 200px;
+      height: 30px;
+      margin-top: 10px;
+      border-radius: 5px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="palavraAleatoria">
+    <div id="zufalligesWort"></div>
+    <p>Qual é a tradução?</p>
+    <input type="text" class="inserirTexto">
+    <button id="enviar" class="enviarResposta">Enviar</button>
+    <div class="box"></div>
+  </div>
+
+  <script>
+    const array = ["Ansicht", "Beurteilung", "Voraussetzung", "Zusammenhang", "Verhalten", "Bedingung", "Einfluss", "Verantwortung", "Erkenntnis", "Fähigkeit"];
+    const traducao = ["opinião", "julgamento", "pré-requisito", "contexto", "comportamento", "condição", "influência", "responsabilidade", "conhecimento", "capacidade"];
+
+    // Sorteia um índice
+    let indiceSorteado = Math.floor(Math.random() * array.length);
+    
+    // Mostra a palavra em alemão
+    document.getElementById("zufalligesWort").textContent = array[indiceSorteado];
+
+    // Ao clicar no botão
+    document.getElementById("enviar").onclick = () => {
+      let resposta = document.querySelector(".inserirTexto").value.trim().toLowerCase();
+
+      if (resposta === traducao[indiceSorteado].toLowerCase()) { //indiceSorteado é usado tanto em traducao como pra obter a palavra aleatória de array
+        document.querySelector(".box").style.backgroundColor = 'green';
+      } else {
+        document.querySelector(".box").style.backgroundColor = 'red';
+      }
+    };
+  </script>
+</body>
+</html>

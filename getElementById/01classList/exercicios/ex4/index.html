@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList - toggle</title>
+    <style>
+        body, html{
+            position: relative;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            background-color: black;
+            color: rgb(255, 255, 161);
+            height: 115px;
+            text-align: center;
+        }
+        .mostrar{
+            width: 90px;
+            position: absolute;
+            padding: 5px;
+            border-radius: 8px;
+            border: none;
+            left: 5px;
+            color: black;
+            cursor: pointer;
+            background-color: orange;
+        }
+        ul{
+            display: none;
+        }
+        div:hover button{
+            opacity: 1;
+        }
+        button:hover{
+            background-color: rgb(255, 255, 169);
+            color: rgb(102, 0, 0);
+            color: red;
+        }
+        ul button{
+            position: absolute;
+            top: 105px;
+            left: 5px;
+            width: 90px;
+            color: black;
+            background-color: rgb(255, 218, 148);
+            box-shadow: 0px 0px 18px orange;
+            padding: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+        }
+        .botao-1{
+            top: 105px;
+        }
+        .botao-2{
+            top: 130px;
+        }
+        .botao-3{
+            top: 155px;
+        }
+        .botao-4{
+            top: 180px;
+        }
+        .n{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Menu</h1>
+        <div>
+            <button onclick="mostrar()" class="mostrar">Menu</button>
+            
+            <ul id="menu">
+                <button class="botao-1">Opção 1</button>
+                <button class="botao-2">Opção 2</button>
+                <button class="botao-3">Opção 3</button>
+                <button class="botao-4">Opção 4</button>
+            
+            </ul>
+        </div>
+    </header>
+    <script>
+        function mostrar(){
+            const n = document.getElementById('menu')
+            n.classList.toggle('n')
+        }//clicando no botão toggle adiciona a class .n em ul se ela não existir e remove ela se ela já existir 
+    </script>
+</body>
+</html>

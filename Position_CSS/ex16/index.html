@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            position: relative;
+            width: 530px;
+            height: 450px;
+            border-radius: 20px;
+            z-index: 0;
+            overflow: hidden;
+        }
+        img{
+            position: absolute;
+            height: 100%;
+            width: 100%;        
+            z-index: 1;
+        }
+        .bi-geo-alt-fill{
+            position: absolute;
+            top: 186px;
+            right: 194px;
+            z-index: 2;
+            color: red;
+            cursor: pointer;
+            opacity: 1;
+        }
+        .bi-geo-alt-fill:hover{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="USA map.png" alt="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg>
+    </div>
+</body>
+</html>

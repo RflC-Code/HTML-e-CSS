@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .notificacao {
+          background-color: lightgreen;
+          padding: 10px;
+          border: 2px solid green;
+          width: 200px;
+          text-align: center;
+          margin-top: 10px;
+        }
+      
+        .escondido {
+          display: none;
+        }
+      </style>
+</head>
+<body>
+    <button onclick="mostrarNotificacao()">Mostrar Notificação</button>
+
+    <div id="notificacao" class="notificacao escondido">
+    Notificação recebida!
+    </div>
+
+    <script>
+    function mostrarNotificacao() {
+        const caixa = document.getElementById('notificacao');
+
+        // Remove a classe 'escondido' para mostrar a notificação
+        caixa.classList.remove('escondido');
+
+        // Depois de 3 segundos (3000 ms), adiciona de novo a classe 'escondido'
+        setTimeout(() => {
+        caixa.classList.add('escondido');
+        }, 3000);
+    }
+    </script>
+</body>
+</html>

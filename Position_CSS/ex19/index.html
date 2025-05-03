@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .quadro{
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 20px;
+            border-radius: 50%;
+            border: 15px solid rgb(67, 65, 37);
+            overflow: hidden;
+            background-color: rgba(173, 216, 230, 0.305);
+        }
+        img{
+            position: relative;
+            transition: 2s;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+        .rua:hover img{
+            position: relative;
+            transform: translateX(150%); 
+        }
+        .estrada:hover img{
+            position: relative;
+            transform: translateX(150%); 
+        }
+        .galo:hover img{
+            position: relative;
+            transform: translateX(150%); 
+        }
+        .quadro .texto{
+            color: rgb(67, 65, 37);
+            position: absolute;
+            top: 50%;
+            left: 150%;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+            width: 80%;
+            font-size: 12px;
+            line-height: .8em;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .quadro:hover .texto{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        p{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadro rua">
+        <img src="image.jpg" alt="">
+        <div class="texto">
+            <h3>Street</h3>
+            <p>That flat thing where cars go vroom and people try not to get hit.</p>
+        </div>
+    </div>
+    <div class="quadro estrada">
+        <img src="images.jpg" alt="">
+        <div class="texto">
+            <h3>Road</h3>
+            <p>A really long street that sometimes goes nowhere but takes forever to get there.</p>
+        </div>
+    </div>
+    <div class="quadro galo">
+        <img src="crowing-rooster.jpg" alt="">
+        <div class="texto">
+            <h3>Rooster</h3>
+            <p>Loud chicken dude with attitude that screams at the sun for no reason.</p>
+        </div>
+    </div>
+</body>
+</html>

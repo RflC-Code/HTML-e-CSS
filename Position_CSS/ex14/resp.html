@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício 14 – Ícones sobre imagem</title>
+  <style>
+    .perfil-container {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+    }
+
+    .foto-perfil {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .icone {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      padding: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .icone.canto-inferior-direito {
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .icone.canto-superior-esquerdo {
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="perfil-container">
+    <img src="https://i.pravatar.cc/200" alt="Foto de perfil" class="foto-perfil">
+
+    <div class="icone canto-superior-esquerdo">⚙️</div>
+    <div class="icone canto-inferior-direito">📷</div>
+  </div>
+
+</body>
+</html>

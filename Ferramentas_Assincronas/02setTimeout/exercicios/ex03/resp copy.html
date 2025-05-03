@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>setTimeout com Cancelamento</title>
+</head>
+<body>
+  <h2>Teste de setTimeout com Cancelamento</h2>
+
+  <button onclick="agendarMensagem()">Agendar Mensagem</button>
+  <button onclick="cancelarMensagem()">Cancelar Mensagem</button>
+
+  <script>
+    let timeoutID;
+
+    function agendarMensagem() {
+      timeoutID = setTimeout(() => {
+        alert("A mensagem apareceu depois de 5 segundos!");
+      }, 5000);
+
+      alert("Mensagem agendada.");
+    }
+
+    function cancelarMensagem() {
+      clearTimeout(timeoutID);
+      alert("Mensagem cancelada.");
+    }
+  </script>
+</body>
+</html>

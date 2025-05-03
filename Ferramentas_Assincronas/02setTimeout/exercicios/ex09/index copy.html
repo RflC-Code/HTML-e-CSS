@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 9 – Timer com prompt (DOM + prompt)</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .kisten{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            width: 150px;
+            height: 150px;
+            margin: 20px 40px;
+            background-image: radial-gradient(circle, rgb(121, 121, 255)30%, rgb(23, 23, 255));
+            text-shadow: 1px -1px 0px blue;
+            border-radius: 20px;
+            color: rgb(255, 255, 170);
+            box-shadow: 0px 0px 39px rgb(255, 255, 142);
+            border: 1px solid blue;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const segundos = prompt('Em quantos segundos a mensagem deve aparecer?')
+        const segundos2 = Number(segundos+'000')
+        setTimeout(()=>{
+            document.getElementById("box").classList.add("kisten")
+            document.getElementById("box").textContent = `Se passaram ${segundos} segundos.`
+        }, segundos2)
+        setTimeout(()=>{
+            document.getElementById("box").classList.remove("kisten")
+            document.getElementById("box").textContent = ""
+        }, segundos2 + 4000)
+    </script>
+</body>
+</html>

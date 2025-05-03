@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+          display: flex;
+          gap: 40px;
+          margin-top: 60px;
+          justify-content: center;
+          border: 1px solid black;
+        }
+      
+        .sem-position,
+        .com-position {
+          width: 120px;
+          height: 120px;
+          color: white;
+          text-align: center;
+          line-height: 120px;
+          font-weight: bold;
+          transition: transform 0.5s ease;
+        }
+      
+        .sem-position {
+          background-color: royalblue;
+          transform: translateY(-30px);
+        }
+      
+        .com-position {
+          background-color: darkorange;
+          position: relative;
+          transform: translateY(-30px);
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sem-position">Sem position</div>
+        <div class="com-position">Com position</div>
+      </div>
+</body>
+</html>

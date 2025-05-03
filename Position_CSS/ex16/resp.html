@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa com Marcador</title>
+  <style>
+    .mapa {
+      position: relative;
+      width: 400px;
+      height: 250px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/800px-Equirectangular_projection_SW.jpg');
+      background-size: cover;
+      border: 2px solid #333;
+    }
+
+    .marcador {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      top: 40%;   /* Ajuste vertical */
+      left: 60%;  /* Ajuste horizontal */
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Exercício 16 – Mapa com Marcador</h2>
+
+  <div class="mapa">
+    <div class="marcador"></div>
+  </div>
+
+</body>
+</html>

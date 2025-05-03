@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Notificação no Topo</title>
+  <style>
+    .notificacao {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 18px;
+      z-index: 9999;
+
+      /* Começa escondida */
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .notificacao.mostrar {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notificacao" id="notificacao">
+    ✅ Você foi logado com sucesso!
+  </div>
+
+  <script>
+    const notificacao = document.getElementById('notificacao');
+
+    // Mostra a notificação
+    notificacao.classList.add('mostrar');
+
+    // Depois de 3 segundos, esconde de novo
+    setTimeout(() => {
+      notificacao.classList.remove('mostrar');
+    }, 3000);
+  </script>
+
+</body>
+</html>
