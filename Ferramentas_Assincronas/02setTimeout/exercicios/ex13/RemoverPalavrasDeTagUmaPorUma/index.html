@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .frase{
+            width: 300px;
+            height: 100px;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.214);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
 
-    <div id="frase">maçã banana laranja uva</div>
+    <div id="frase" class="frase">maçã banana laranja uva</div>
 
     <script>
-        const elemento = document.getElementById("frase")
-        const palavras = elemento.textContent.trim().split(" ")
-        palavras.pop()
-        elemento.textContent = palavras.join(" ")
+        for(let i = 0; i < 4; i++){
+            setTimeout(()=>{
+                const elemento = document.getElementById("frase")
+                const palavras = elemento.textContent.trim().split(" ")
+                palavras.pop()
+                elemento.textContent = palavras.join(" ")
+            }, i * 2000)
+        }
     </script>
 
 </body>

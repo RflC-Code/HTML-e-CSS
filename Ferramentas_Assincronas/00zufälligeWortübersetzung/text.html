@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Fala em Alemão</title>
+</head>
+<body>
+  <button onclick="falar()">🔊 Ouvir frase em alemão</button>
+
+  <script>
+    function falar() {
+      const frase = "Meiner Ansicht nach sollte man mehr auf die Umwelt achten.";
+      const utterance = new SpeechSynthesisUtterance(frase);
+      utterance.lang = "de-DE";
+
+      // Aguarda as vozes estarem carregadas
+      speechSynthesis.onvoiceschanged = () => {
+        const voices = speechSynthesis.getVoices();
+        const vozAlema = voices.find(v => v.lang === "de-DE");
+
+        if (vozAlema) {
+          utterance.voice = vozAlema;
+        } else {
+          alert("Nenhuma voz alemã encontrada no seu sistema.");
+        }
+
+        speechSynthesis.speak(utterance);
+      };
+
+      // Em alguns navegadores, as vozes já estão carregadas
+      const voices = speechSynthesis.getVoices();
+      if (voices.length > 0) {
+        const vozAlema = voices.find(v => v.lang === "de-DE");
+        if (vozAlema) {
+          utterance.voice = vozAlema;
+          speechSynthesis.speak(utterance);
+        } else {
+          alert("Nenhuma voz alemã disponível.");
+        }
+      }
+    }
+  </script>
+</body>
+</html>

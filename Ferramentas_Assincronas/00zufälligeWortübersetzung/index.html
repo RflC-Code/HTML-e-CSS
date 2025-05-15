@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zufällige Wortübersetzung</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+    <div class="sätzenfeld"><div class="satz"></div></div>
+    <div class="kastenfrage">
+        <div class="frage"></div>
+        <input type="text" class="textEinfügen">
+        <button class="schicken" onclick="senden()"></button>
+    </div>
+    <div class="sprache-wechseln">
+        <div class="wechseln portugiesisch" onclick="schalten(); portugiesisch()">Português</div>
+        <div class="wechseln englisch" onclick="schalten(); englisch()">English</div>
+    </div>
+
+
+    <script src="jScript.js"></script>
+</body>
+</html>
